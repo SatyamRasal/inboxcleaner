@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | DriftsAi InboxCleaner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom Animations for the Thanks Page */
+        .success-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+            padding-top: 80px;
+        }
+
+        .success-card {
+            max-width: 500px;
+            padding: 3rem;
+            text-align: center;
+            animation: slideUpFade 0.6s ease-out forwards;
+        }
+
+        /* Checkmark Animation */
+        .checkmark-circle {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            border-radius: 50%;
+            background-color: rgba(39, 201, 63, 0.1);
+            margin-bottom: 2rem;
+            animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        .checkmark {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+        }
+
+        .checkmark-path {
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            stroke: #27c93f;
+            stroke-width: 4;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            animation: drawStroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) 0.4s forwards;
+        }
+
+        .success-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out 0.6s forwards;
+        }
+
+        .success-text {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out 0.8s forwards;
+        }
+
+        .home-btn-wrapper {
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out 1s forwards;
+        }
+
+        /* Keyframes */
+        @keyframes slideUpFade {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes scaleIn {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes drawStroke {
+            100% { stroke-dashoffset: 0; }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Inbox<span>Cleaner</span></a>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+        </div>
+    </nav>
+
+    <main class="success-container container">
+        <div class="success-card glass">
+            <div class="checkmark-circle">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <path class="checkmark-path" d="M14 27l7 7 16-16" />
+                </svg>
+            </div>
+            
+            <h1 class="success-title">Message Sent!</h1>
+            <p class="success-text">
+                Thank you for reaching out. We have received your feedback/complaint and our support team will get back to you within 24-48 hours.
+            </p>
+            
+            <div class="home-btn-wrapper">
+                <a href="index.html" class="btn btn-primary">Return to Homepage</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="position: absolute; bottom: 0; width: 100%; border-top: none; padding: 2rem 0; background: transparent;">
+        <div class="container text-center">
+            <p style="color: var(--text-muted);">&copy; 2026 InboxCleaner. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
