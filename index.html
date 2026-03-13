@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InboxCleaner | Clean Your Gmail Inbox in Minutes</title>
+    <meta name="description" content="A powerful desktop application to scan, organize, and clean your Gmail inbox locally and securely.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Inbox<span>Cleaner</span></a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="how.html">How It Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Support</a>
+            </div>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+        </div>
+    </nav>
+
+    <header class="hero section animate-on-scroll">
+        <div class="container hero-content">
+            <h1>Clean Your Gmail Inbox in Minutes</h1>
+            <p>Scan thousands of emails locally and organize newsletters, promotions, receipts, and spam instantly. Fast, secure, and entirely on your machine.</p>
+            <div class="hero-buttons">
+                <a href="https://yourname.gumroad.com/l/inboxcleaner" target="_blank" class="btn btn-primary">Buy on Gumroad</a>
+                <a href="#demo" class="btn btn-secondary">Check Product</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="demo section animate-on-scroll" id="demo">
+        <div class="container">
+            <h2 class="section-title">See It In Action</h2>
+            <div class="browser-mockup glass">
+                <div class="mockup-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="mockup-body">
+                    <div class="demo-placeholder">
+                        <h3>Inbox Dashboard</h3>
+                        <p>Visualizing 15,243 emails scanned in 4.2 seconds.</p>
+                        <p><em>[Insert Product Screenshot / GIF Here]</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="privacy-banner animate-on-scroll">
+        <div class="container">
+            <h2>🔒 Your emails never leave your computer.</h2>
+            <p>Processing happens entirely locally on your machine for absolute privacy.</p>
+        </div>
+    </section>
+
+    <section class="features section" id="features">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Everything you need to regain control</h2>
+            <div class="grid features-grid">
+                <div class="card glass animate-on-scroll">
+                    <h3>Local Processing</h3>
+                    <p>Total privacy. Your data is analyzed on your own hardware, never uploaded to a cloud server.</p>
+                </div>
+                <div class="card glass animate-on-scroll">
+                    <h3>AI Classification</h3>
+                    <p>Smart categorization of newsletters, receipts, and important updates automatically.</p>
+                </div>
+                <div class="card glass animate-on-scroll">
+                    <h3>Bulk Actions</h3>
+                    <p>Archive or delete thousands of useless emails with a single click.</p>
+                </div>
+                <div class="card glass animate-on-scroll">
+                    <h3>1-Click Unsubscribe</h3>
+                    <p>Automatically detect mailing lists and unsubscribe without leaving the app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing section" id="pricing">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Simple, Transparent Pricing</h2>
+            <div class="pricing-card glass animate-on-scroll">
+                <h3>Lifetime License</h3>
+                <div class="price">$29</div>
+                <p>One-time payment. No subscriptions. Yours forever.</p>
+                <ul class="pricing-features">
+                    <li>✓ Unlimited email scanning</li>
+                    <li>✓ Windows Desktop App (.exe)</li>
+                    <li>✓ Secure checkout via Gumroad</li>
+                    <li>✓ Priority email support</li>
+                </ul>
+                <a href="https://yourname.gumroad.com/l/inboxcleaner" target="_blank" class="btn btn-primary full-width">Get it on Gumroad</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact section" id="contact">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Feedback & Complaints</h2>
+            <p class="text-center animate-on-scroll" style="margin-top: -20px; margin-bottom: 30px; color: var(--text-muted);">Have an issue with the product or want to request a feature? Let us know below.</p>
+            
+            <form action="https://formsubmit.co/your-email@example.com" method="POST" class="contact-form glass animate-on-scroll">
+                <input type="hidden" name="_subject" value="InboxCleaner: New Feedback/Complaint">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="type">Inquiry Type</label>
+                    <select id="type" name="type" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--input-border); background: var(--input-bg); color: var(--text-color); font-family: inherit; margin-bottom: 1.5rem;">
+                        <option value="General Feedback">General Feedback</option>
+                        <option value="Bug / Complaint">Bug Report / Complaint</option>
+                        <option value="Feature Request">Feature Request</option>
+                        <option value="Payment Issue">Payment/Gumroad Issue</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Please describe your issue or feedback in detail..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Submit Ticket</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Inbox<span>Cleaner</span></h3>
+                    <p>Take back your inbox securely.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="mailto:support@inboxcleaner.app">support@inboxcleaner.app</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="terms.html#privacy">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 InboxCleaner. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works | InboxCleaner</title>
+    <meta name="description" content="Learn how InboxCleaner securely and locally scans your Gmail to help you declutter your inbox.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Inbox<span>Cleaner</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#pricing">Pricing</a>
+            </div>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+        </div>
+    </nav>
+
+    <main class="section" style="padding-top: 150px; min-height: 80vh;">
+        <div class="container">
+            <h1 class="section-title animate-on-scroll">How InboxCleaner Works</h1>
+            <p class="text-center animate-on-scroll" style="margin-top: -20px; margin-bottom: 50px; color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                A transparent look at how our desktop application safely connects to your account and processes your data strictly on your machine.
+            </p>
+
+            <div class="steps-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto; gap: 3rem;">
+                
+                <div class="card glass animate-on-scroll" style="display: flex; gap: 2rem; align-items: flex-start; text-align: left;">
+                    <div class="step-number" style="margin: 0; flex-shrink: 0;">1</div>
+                    <div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Securely Connect to Gmail</h3>
+                        <p style="color: var(--text-muted); line-height: 1.6;">
+                            Launch the application and sign in using Google's official OAuth secure login window. InboxCleaner only requests the specific permissions needed to read and manage your emails. We never see, touch, or store your actual Google password.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card glass animate-on-scroll" style="display: flex; gap: 2rem; align-items: flex-start; text-align: left;">
+                    <div class="step-number" style="margin: 0; flex-shrink: 0;">2</div>
+                    <div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Local Machine Learning Scan</h3>
+                        <p style="color: var(--text-muted); line-height: 1.6;">
+                            Once connected, the software downloads email headers and metadata directly to your computer's RAM. Our built-in, offline AI engine then categorizes your emails into Newsletters, Receipts, Promotions, and Spam. <strong>No data is ever sent to a third-party cloud.</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card glass animate-on-scroll" style="display: flex; gap: 2rem; align-items: flex-start; text-align: left;">
+                    <div class="step-number" style="margin: 0; flex-shrink: 0;">3</div>
+                    <div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Review & 1-Click Clean</h3>
+                        <p style="color: var(--text-muted); line-height: 1.6;">
+                            The dashboard presents a visual summary of your inbox clutter. You have total control: review the categories, select the senders you no longer want to hear from, and hit "Clean". The app will bulk-archive or delete the emails and automatically send unsubscribe requests where possible.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center animate-on-scroll" style="margin-top: 60px;">
+                <a href="https://yourname.gumroad.com/l/inboxcleaner" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 15px 40px;">Get Started Now</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Inbox<span>Cleaner</span></h3>
+                    <p>Take back your inbox securely.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="mailto:support@inboxcleaner.app">support@inboxcleaner.app</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="terms.html#privacy">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 InboxCleaner. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
