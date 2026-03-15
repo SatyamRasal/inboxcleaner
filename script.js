@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Note: Replace 'YOUR_RAZORPAY_KEY_ID' with your actual key from Razorpay Dashboard
             var options = {
                 "key": "rzp_live_SRVgONoABQVh2l", 
-                "amount": "450", // 900 subunits = ₹9.00 (Standardizing on INR for settlement)
+                "amount": "45000", // 900 subunits = ₹9.00 (Standardizing on INR for settlement)
                 "currency": "INR",
                 "name": "DriftsAi",
                 "description": "InboxCleaner Lifetime License",
