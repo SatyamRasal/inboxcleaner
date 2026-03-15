@@ -3,17 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How It Works | DriftsAi InboxCleaner</title>
-    <meta name="description" content="Learn how InboxCleaner securely and locally scans your Gmail to help you declutter your inbox.">
+    <title>How It Works | InboxCleaner</title>
+    <meta name="description" content="Step-by-step guide on how to install, connect, and clean your Gmail with InboxCleaner.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Extra styles specifically for the documentation lists */
+        .doc-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+        .doc-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .doc-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        .highlight-box {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+            color: var(--text-color);
+        }
+        .step-letter {
+            font-weight: 700;
+            color: var(--text-color);
+            display: block;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        /* App Password Collapsible Guide */
+        details.app-password-guide {
+            background: var(--input-bg);
+            border: 1px solid var(--input-border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            transition: all 0.3s ease;
+        }
+        details.app-password-guide summary {
+            font-weight: 600;
+            color: var(--primary-color);
+            cursor: pointer;
+            outline: none;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        details.app-password-guide summary::-webkit-details-marker {
+            display: none;
+        }
+        details.app-password-guide summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        details.app-password-guide[open] summary::after {
+            transform: rotate(45deg);
+        }
+        details.app-password-guide[open] {
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="logo">DriftsAi Inbox<span>Cleaner</span></a>
+            <a href="index.html" class="logo">Inbox<span>Cleaner</span></a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="index.html#features">Features</a>
@@ -23,49 +97,106 @@
         </div>
     </nav>
 
-    <main class="section" style="padding-top: 150px; min-height: 80vh;">
+    <main class="section" style="padding-top: 120px; min-height: 80vh;">
         <div class="container">
             <h1 class="section-title animate-on-scroll">How InboxCleaner Works</h1>
-            <p class="text-center animate-on-scroll" style="margin-top: -20px; margin-bottom: 50px; color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                A transparent look at how our desktop application safely connects to your account and processes your data strictly on your machine.
+            <p class="text-center animate-on-scroll" style="margin-top: -20px; margin-bottom: 50px; color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                A complete A-to-Z guide on activating your license, connecting your account securely, and mastering the dashboard to reach Inbox Zero.
             </p>
 
-            <div class="steps-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto; gap: 3rem;">
+            <div class="steps-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto; gap: 2.5rem;">
                 
                 <div class="card glass animate-on-scroll" style="display: flex; gap: 2rem; align-items: flex-start; text-align: left;">
                     <div class="step-number" style="margin: 0; flex-shrink: 0;">1</div>
-                    <div>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Securely Connect to Gmail</h3>
-                        <p style="color: var(--text-muted); line-height: 1.6;">
-                            Launch the application and sign in using Google's official OAuth secure login window. InboxCleaner only requests the specific permissions needed to read and manage your emails. We never see, touch, or store your actual Google password.
-                        </p>
+                    <div style="width: 100%;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Installation & License Activation</h3>
+                        <p style="color: var(--text-muted);">Secure your local copy of the software.</p>
+                        <ul class="doc-list">
+                            <li><strong>Launch the App:</strong> Open the installed application to see the login screen.</li>
+                            <li><strong>Copy the Generated Key:</strong> A unique license key is generated specifically for your machine and displayed in the "Generated license key" box.</li>
+                            <li><strong>Activate:</strong> Copy that code, paste it into the "Enter license key" input field, and click <strong>Activate</strong>.</li>
+                        </ul>
+                        <div class="highlight-box">
+                            Once activated, the <strong>Connect to Gmail</strong> button will become available.
+                        </div>
                     </div>
                 </div>
 
                 <div class="card glass animate-on-scroll" style="display: flex; gap: 2rem; align-items: flex-start; text-align: left;">
                     <div class="step-number" style="margin: 0; flex-shrink: 0;">2</div>
-                    <div>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Local Machine Learning Scan</h3>
-                        <p style="color: var(--text-muted); line-height: 1.6;">
-                            Once connected, the software downloads email headers and metadata directly to your computer's RAM. Our built-in, offline AI engine then categorizes your emails into Newsletters, Receipts, Promotions, and Spam. <strong>No data is ever sent to a third-party cloud.</strong>
-                        </p>
+                    <div style="width: 100%;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Connecting to Gmail</h3>
+                        <p style="color: var(--text-muted);">InboxCleaner uses IMAP to communicate with Google locally.</p>
+                        
+                        <div class="highlight-box" style="border-left-color: #f59e0b; background: rgba(245, 158, 11, 0.1);">
+                            <strong>Security Note:</strong> You must use a Google App Password rather than your standard Gmail password. This ensures we never have access to your main account credentials.
+                        </div>
+
+                        <details class="app-password-guide">
+                            <summary>Need help generating an App Password? Click to expand.</summary>
+                            <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--input-border);">
+                                <p style="color: var(--text-color); margin-bottom: 1rem; font-weight: 500;">Google requires a unique 16-digit password for desktop applications. It takes 60 seconds to create:</p>
+                                <ol style="padding-left: 1.5rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem;">
+                                    <li style="margin-bottom: 0.5rem;">Go to your <a href="https://myaccount.google.com/security" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Google Account Security</a> page.</li>
+                                    <li style="margin-bottom: 0.5rem;">Scroll down to "How you sign in to Google" and ensure <strong>2-Step Verification</strong> is turned ON.</li>
+                                    <li style="margin-bottom: 0.5rem;">In the search bar at the very top of the Google settings page, type <strong>"App passwords"</strong> and click the matching result.</li>
+                                    <li style="margin-bottom: 0.5rem;">Enter a name for the app (e.g., <em>"InboxCleaner"</em>) and click <strong>Create</strong>.</li>
+                                    <li style="margin-bottom: 0.5rem;">Google will display a 16-character password in a pop-up window.</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong>Copy this password</strong> (ignoring spaces) and paste it into the InboxCleaner login screen.</li>
+                                </ol>
+                                
+                            </div>
+                        </details>
+
+                        <ul class="doc-list">
+                            <li><strong>Email:</strong> Enter your full Gmail address.</li>
+                            <li><strong>Password:</strong> Enter your 16-character Google App Password.</li>
+                            <li><strong>Connection:</strong> Click <strong>Connect to Gmail</strong>. The app will verify your credentials and open your dashboard.</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="card glass animate-on-scroll" style="display: flex; gap: 2rem; align-items: flex-start; text-align: left;">
                     <div class="step-number" style="margin: 0; flex-shrink: 0;">3</div>
-                    <div>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Review & 1-Click Clean</h3>
-                        <p style="color: var(--text-muted); line-height: 1.6;">
-                            The dashboard presents a visual summary of your inbox clutter. You have total control: review the categories, select the senders you no longer want to hear from, and hit "Clean". The app will bulk-archive or delete the emails and automatically send unsubscribe requests where possible.
-                        </p>
+                    <div style="width: 100%;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Using the Dashboard</h3>
+                        <p style="color: var(--text-muted);">Follow this A-to-Z process to organize your inbox:</p>
+                        
+                        <span class="step-letter">Step A: Scanning the Inbox</span>
+                        <ul class="doc-list">
+                            <li>Click the <strong>Scan Inbox</strong> button at the top right.</li>
+                            <li>The app securely fetches the latest 1,000 emails.</li>
+                            <li>The Progress Bar will show the status of the scan (e.g., "Scanning inbox... 44%").</li>
+                            <li>Once completed, your emails are automatically categorized into Newsletters, Promotions, Receipts, Spam, or Other.</li>
+                        </ul>
+
+                        <span class="step-letter">Step B: Analyzing and Filtering</span>
+                        <ul class="doc-list">
+                            <li><strong>Category Cards:</strong> Click on a card (e.g., "Promotions") to instantly filter the list to only show those emails.</li>
+                            <li><strong>Search:</strong> Use the search bar to find specific senders or keywords in the subject line.</li>
+                            <li><strong>Sender Analytics:</strong> View the Top Sender Analytics panel on the right to see who emails you the most.</li>
+                        </ul>
+
+                        <span class="step-letter">Step C: Taking Bulk Action</span>
+                        <ul class="doc-list">
+                            <li><strong>Selection:</strong> Use the "Select All" checkbox or click individual checkboxes next to emails.</li>
+                            <li><strong>Archive/Delete:</strong> Click <strong>Archive Selected</strong> (moves to "[Gmail]/All Mail") or <strong>Delete Selected</strong> (moves to "[Gmail]/Trash").</li>
+                            <li><strong>Quick Clean:</strong> Use the <strong>Delete Promotions</strong> button to remove all identified promotional emails in one click.</li>
+                        </ul>
+
+                        <span class="step-letter">Step D: Customizing the AI Classifier</span>
+                        <p style="color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.95rem;">If certain emails are being miscategorized, scroll to the Custom Detection Keywords panel:</p>
+                        <ul class="doc-list">
+                            <li>Add specific words (e.g., "Receipt") to the appropriate category box.</li>
+                            <li>Click <strong>Save Keywords</strong> and <strong>Rescan</strong> your inbox to apply the new local rules.</li>
+                        </ul>
                     </div>
                 </div>
 
             </div>
 
             <div class="text-center animate-on-scroll" style="margin-top: 60px;">
-                <a href="https://yourname.gumroad.com/l/inboxcleaner" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 15px 40px;">Get Started Now</a>
+                <a href="https://yourname.gumroad.com/l/inboxcleaner" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 15px 40px;">Get it on Gumroad for $9</a>
             </div>
 
         </div>
@@ -85,7 +216,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 InboxCleaner. All rights reserved.</p>
+                <p>&copy; 2026 Driftsai InboxCleaner. All rights reserved.</p>
             </div>
         </div>
     </footer>
