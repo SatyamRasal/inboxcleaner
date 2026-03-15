@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     // 2. Trigger Automatic Download for the .zip file
                     // Since it's in the same folder, we use the relative path.
-                    const fileUrl = "InboxCleaner Setup 2.0.0.zip"; 
+                    const fileUrl = "https://drive.google.com/file/d/1rXjk5qV5s7Uugv_pjDNaZ7SdBbUgdOK7/view?usp=drivesdk"; 
                     const downloadLink = document.createElement('a');
                     downloadLink.href = fileUrl;
-                    downloadLink.download = "InboxCleaner_Setup_2.0.0.zip"; 
+                    downloadLink.download = "https://drive.google.com/file/d/1rXjk5qV5s7Uugv_pjDNaZ7SdBbUgdOK7/view?usp=drivesdk"; 
                     document.body.appendChild(downloadLink);
                     downloadLink.click();
                     document.body.removeChild(downloadLink);
